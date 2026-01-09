@@ -1,80 +1,71 @@
 from datetime import datetime
+import csv
+
+
 class Market:
-    def __init__(self):
-        self.fiyat_listesi = {}
-        self.csv_fiyatlari_yukle("fiyatlar.csv")
+    def __init__(self, fiyat_dosya_yolu):
+        self.fiyat_listesi = self._csv_fiyatlari_yukle(fiyat_dosya_yolu)
         self.fisler = []
         self.fis_no = 0
 
-    def csv_fiyatlari_yukle(self, dosya_yolu):
-        with open(dosya_yolu, "r") as f:
-            for line in f:
-                urun, fiyat = line.strip().split(",")
-                self.fiyat_listesi[urun.lower()] = float(fiyat)
+    def _csv_fiyatlari_yukle(self, dosya_yolu):
+        fiyatlar = {}
+        try:
+            with open(dosya_yolu, newline="", encoding="utf-8") as f:
+                reader = csv.reader(f)
+                for urun, fiyat in reader:
+                    fiyatlar[urun.lower()] = float(fiyat)
+        except FileNotFoundError:
+            print("Fiyat dosyası bulunamadı.")
+        return fiyatlar
 
-    def birim_fiyat(self, urun):
-        return self.fiyat_listesi.get(urun.lower())
-
-    def satis_yap(self):
+    def yeni_satis(self, urunler):
+        """
+        urunler: ['elma', 'elma', 'sut']
+        """
         self.fis_no += 1
-        yeni_fis = Fis(self.fis_no, datetime.now(), self.fiyat_listesi)
-        while True:
-            urun_adi = input("Ürün adı: ").lower()
-            if urun_adi == "q":
-                break
+        fis = Fis(self.fis_no, datetime.now())
+
+        for urun_adi in urunler:
             if urun_adi not in self.fiyat_listesi:
-                print("Üzgünüz, bu ürün mağazamızda bulunmamaktadır.")
                 continue
-            yeni_fis += Urun(urun_adi, self.fiyat_listesi[urun_adi], "10.10.2020")
+            fis.urun_ekle(urun_adi, self.fiyat_listesi[urun_adi])
 
-        self.fisler.append(yeni_fis)
-        return yeni_fis
-
-    def __str__(self):
-        return str(self.fiyat_listesi)
-
-
-class Urun:
-    def __init__(self, ad, fiyat, uretim_tarihi):
-        self.ad = ad
-        self.fiyat = fiyat
-        self.uretim_tarihi = uretim_tarihi
-
-    def __str__(self):
-        return f"{self.ad.capitalize()} {self.fiyat} TL"
+        self.fisler.append(fis)
+        return fis
 
 
 class Fis:
-    def __init__(self, fis_no, tarih, fiyat_listesi):
-        self.urunler = {}
+    def __init__(self, fis_no, tarih):
         self.fis_no = fis_no
         self.tarih = tarih
-        self.fiyat_listesi = fiyat_listesi  # Fiyat listesini Fis sınıfına ekleyin
+        self.urunler = {}  # urun_adı -> [adet, birim_fiyat]
 
-    def toplam(self):
-        return sum([u.fiyat * adet for u, adet in self.urunler.items()])
-
-    def __iadd__(self, urun):  # fis += urun
-        if urun.ad in self.urunler:
-            self.urunler[urun.ad] += 1
+    def urun_ekle(self, urun_adi, fiyat):
+        if urun_adi in self.urunler:
+            self.urunler[urun_adi][0] += 1
         else:
-            self.urunler[urun.ad] = 1
-        return self
+            self.urunler[urun_adi] = [1, fiyat]
+
+    def toplam_tutar(self):
+        return sum(adet * fiyat for adet, fiyat in self.urunler.values())
 
     def __str__(self):
-        s = "Fis No: " + str(self.fis_no) + "\n"
-        s += "Tarih: " + str(self.tarih) + "\n"
-        for urun_ad, adet in self.urunler.items():
-            birim_fiyat = self.fiyat_listesi[urun_ad]  # Değişiklik burada
-            s += f"{adet} x {urun_ad} {adet * birim_fiyat} TL\n"
-        s += "Toplam Tutar: " + str(self.toplam()) + " TL"
+        s = f"Fis No: {self.fis_no}\n"
+        s += f"Tarih: {self.tarih}\n"
+        for urun, (adet, fiyat) in self.urunler.items():
+            s += f"{adet} x {urun.capitalize()} = {adet * fiyat:.2f} TL\n"
+        s += f"Toplam: {self.toplam_tutar():.2f} TL"
         return s
 
-m = Market()
 
-for i in range(3):
-    m.satis_yap()
+# --- Örnek Kullanım ---
+market = Market("fiyatlar.csv")
 
-for fis in m.fisler:
+market.yeni_satis(["elma", "elma", "sut"])
+market.yeni_satis(["ekmek", "sut"])
+
+for fis in market.fisler:
     print(fis)
     print()
+
