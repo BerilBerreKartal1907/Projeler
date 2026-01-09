@@ -28,7 +28,7 @@ And produces a receipt with total cost and timestamp.
 
 **Note:** This project is for learning purposes and is open to further development.
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Square Number Calculator
 
@@ -52,3 +52,37 @@ This project was created to practice basic Python concepts such as user input, v
 - Allowing the user to choose how many numbers to calculate  
 
 **Note:** This is a beginner-level project developed for learning and practice purposes.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Solar Energy System Simulation (Python)
+
+This project is a simple object-oriented Python simulation that models a residential solar energy system.
+
+It calculates:
+- Roof area based on house dimensions and latitude
+- Optimal panel tilt angle
+- Number of solar panels that can be installed
+- Total system cost
+- Total energy production considering panel efficiency
+
+### Project Structure
+- **House**: Represents the physical properties of a house (dimensions, latitude)
+- **SolarPanel**: Stores panel specifications such as power, size, efficiency, and cost
+- **SolarEnergySystem**: Performs all calculations and combines house and panel data
+
+### Concepts Used
+- Python (Object-Oriented Programming)
+- Class & Object design
+- Mathematical calculations with `math` module
+- Real-world system modeling
+
+### Possible Improvements
+- Adding monthly or yearly energy production estimation
+- Including weather and sunlight duration data
+- Creating a graphical user interface (GUI)
+- Exporting results to a CSV or JSON file
+
+### Purpose
+This project was developed to practice object-oriented design and apply mathematical logic to a real-life engineering problem.
+
