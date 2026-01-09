@@ -28,7 +28,7 @@ And produces a receipt with total cost and timestamp.
 
 **Note:** This project is for learning purposes and is open to further development.
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Square Number Calculator
 
@@ -53,7 +53,7 @@ This project was created to practice basic Python concepts such as user input, v
 
 **Note:** This is a beginner-level project developed for learning and practice purposes.
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Solar Energy System Simulation (Python)
 
@@ -86,3 +86,34 @@ It calculates:
 ### Purpose
 This project was developed to practice object-oriented design and apply mathematical logic to a real-life engineering problem.
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Pool Tile Calculator (Python)
+
+This project calculates the optimal square tile size and the total number of tiles required
+to cover all surfaces of a rectangular swimming pool without cutting any tiles.
+
+The solution uses mathematical logic based on the Greatest Common Divisor (GCD) to ensure
+that the selected tile size perfectly fits the pool dimensions.
+
+### Project Overview
+- Determines the largest possible square tile size using GCD
+- Calculates the total surface area of the pool (floor, ceiling, and side walls)
+- Computes the required number of tiles based on surface area
+
+### Concepts Used
+- Python functions and modular design
+- Mathematical problem solving
+- Greatest Common Divisor (GCD)
+- Clean and readable code structure
+- Type hints for better code clarity
+
+### Possible Improvements
+- Supporting rectangular (non-square) tile sizes
+- Adding unit selection (meters, centimeters)
+- Creating a simple user interface
+- Visualizing pool surfaces and tile placement
+
+### Purpose
+This project was developed to practice algorithmic thinking and apply mathematical concepts
+to a real-world engineering problem.
