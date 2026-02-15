@@ -141,3 +141,29 @@ A desktop GUI application built with **Python Tkinter** that performs common tex
 - Support for multiple languages and custom vowel sets
 - Word/character statistics dashboard
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## 🎱 Bouncing Balls Animation (Tkinter)
+
+A Python desktop application built with **Tkinter** that simulates bouncing balls inside a canvas.
+Users can dynamically add balls, change their size and color, and control animation speed.
+
+### 🔹 Features
+- Add multiple balls with random velocity
+- Size and color selection
+- Speed control with upper/lower limits
+- Keyboard shortcuts (start/stop, reset, speed up/down)
+- Optional background image support (works even without Pillow)
+
+### 🛠️ Concepts Used
+- Tkinter GUI development
+- OOP (Ball & App classes)
+- Basic animation loop using `after()`
+- Event handling (keyboard shortcuts)
+- Clean UI layout with `ttk`
+
+### 🚀 Possible Improvements
+- Ball-to-ball collision detection
+- Saving/loading configurations
+- FPS indicator and performance tuning
+- Sound effects or themes
