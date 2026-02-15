@@ -190,3 +190,24 @@ with the highest average grade.
 - Reading students from a CSV file
 - Sorting and ranking all students
 - Displaying summary statistics (min/max/mean)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## ⏰ Meeting Time Generator (Python)
+
+This project generates a random string of words and calculates a fictional meeting time
+based on word lengths.
+
+- The shortest word length becomes the hour
+- The longest word length becomes the minute
+
+### 🛠️ Concepts Used
+- Random string generation
+- List manipulation
+- min/max algorithms
+- Clean function design
+
+### 🚀 Possible Improvements
+- User-defined string input
+- Time validation (24-hour format)
+- Exporting results to file
