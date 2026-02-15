@@ -143,26 +143,26 @@ A desktop GUI application built with **Python Tkinter** that performs common tex
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## 🎱 Bouncing Balls Animation (Tkinter)
+## Bouncing Balls Animation (Tkinter)
 
 A Python desktop application built with **Tkinter** that simulates bouncing balls inside a canvas.
 Users can dynamically add balls, change their size and color, and control animation speed.
 
-### 🔹 Features
+### Features
 - Add multiple balls with random velocity
 - Size and color selection
 - Speed control with upper/lower limits
 - Keyboard shortcuts (start/stop, reset, speed up/down)
 - Optional background image support (works even without Pillow)
 
-### 🛠️ Concepts Used
+### Concepts Used
 - Tkinter GUI development
 - OOP (Ball & App classes)
 - Basic animation loop using `after()`
 - Event handling (keyboard shortcuts)
 - Clean UI layout with `ttk`
 
-### 🚀 Possible Improvements
+### Possible Improvements
 - Ball-to-ball collision detection
 - Saving/loading configurations
 - FPS indicator and performance tuning
@@ -170,30 +170,30 @@ Users can dynamically add balls, change their size and color, and control animat
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## 🧑‍🎓 Top Student Finder (Python)
+## Top Student Finder (Python)
 
 A small Python project that generates random student grade data and finds the student
 with the highest average grade.
 
-### 🔹 Features
+### Features
 - Random student dataset generation
 - Average grade calculation
 - Finding the top student using a clean algorithm (`max` with a key function)
 
-### 🛠️ Concepts Used
+### Concepts Used
 - OOP (Student model)
 - `dataclasses` for clean class design
 - List comprehensions
 - Basic algorithmic thinking
 
-### 🚀 Possible Improvements
+### Possible Improvements
 - Reading students from a CSV file
 - Sorting and ranking all students
 - Displaying summary statistics (min/max/mean)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## ⏰ Meeting Time Generator (Python)
+## Meeting Time Generator (Python)
 
 This project generates a random string of words and calculates a fictional meeting time
 based on word lengths.
@@ -201,13 +201,37 @@ based on word lengths.
 - The shortest word length becomes the hour
 - The longest word length becomes the minute
 
-### 🛠️ Concepts Used
+### Concepts Used
 - Random string generation
 - List manipulation
 - min/max algorithms
 - Clean function design
 
-### 🚀 Possible Improvements
+### Possible Improvements
 - User-defined string input
 - Time validation (24-hour format)
 - Exporting results to file
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## 📚 Library Manager GUI (Tkinter)
+
+A simple desktop application built with **Python Tkinter** to manage a small book library.
+Users can add, delete, search, and list books through a clean GUI.
+
+### 🔹 Features
+- Add books (title, author, year)
+- Delete books by title
+- Search by title or author (case-insensitive)
+- List all stored books
+
+### 🛠️ Concepts Used
+- OOP (Book & Library classes)
+- `dataclasses` for clean data modeling
+- Tkinter GUI development
+- Input validation and basic CRUD operations
+
+### 🚀 Possible Improvements
+- Save/load data (JSON/CSV) for persistence
+- Sorting and filtering options
+- Edit/update existing books
