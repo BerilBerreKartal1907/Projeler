@@ -167,3 +167,26 @@ Users can dynamically add balls, change their size and color, and control animat
 - Saving/loading configurations
 - FPS indicator and performance tuning
 - Sound effects or themes
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## 🧑‍🎓 Top Student Finder (Python)
+
+A small Python project that generates random student grade data and finds the student
+with the highest average grade.
+
+### 🔹 Features
+- Random student dataset generation
+- Average grade calculation
+- Finding the top student using a clean algorithm (`max` with a key function)
+
+### 🛠️ Concepts Used
+- OOP (Student model)
+- `dataclasses` for clean class design
+- List comprehensions
+- Basic algorithmic thinking
+
+### 🚀 Possible Improvements
+- Reading students from a CSV file
+- Sorting and ranking all students
+- Displaying summary statistics (min/max/mean)
