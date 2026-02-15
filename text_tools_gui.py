@@ -2,9 +2,7 @@ import time
 import tkinter as tk
 from tkinter import messagebox, scrolledtext
 
-
 UNLU_HARFLER = "aeıioöuüAEIİOÖUÜ"
-
 
 class MetinAraclariUygulamasi:
     def __init__(self, root: tk.Tk):
@@ -142,3 +140,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
