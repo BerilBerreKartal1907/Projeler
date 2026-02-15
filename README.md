@@ -117,3 +117,27 @@ that the selected tile size perfectly fits the pool dimensions.
 ### Purpose
 This project was developed to practice algorithmic thinking and apply mathematical concepts
 to a real-world engineering problem.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Text Tools GUI (Tkinter)
+
+A desktop GUI application built with **Python Tkinter** that performs common text-processing tasks such as:
+- Displaying letters line by line
+- Reversing text (full and word-by-word)
+- Replacing characters
+- Splitting and joining words
+- Counting vowels
+- Measuring typing speed (time + characters per second)
+
+### Concepts Used
+- Python Tkinter (GUI development)
+- Functions and string manipulation
+- Basic state management (timer)
+- Clean and user-friendly UI structure
+
+### Possible Improvements
+- Add file import/export (TXT)
+- Support for multiple languages and custom vowel sets
+- Word/character statistics dashboard
+
